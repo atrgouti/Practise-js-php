@@ -1,4 +1,4 @@
 <?php
-define("name", "khalid")
-echo $name
+define("name", "khalid");
+echo name
 ?>
