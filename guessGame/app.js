@@ -36,8 +36,6 @@ function ongame(){
 }
 
 
-
-
 onstartGame()
 check.addEventListener("click", ongame)
 again.addEventListener("click", onstartGame)
