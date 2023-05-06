@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import './App.css'
-
+import NavBar from './NavBar'
+import "./AppStyle.css"
 export default function App() {
-  function ChangeColor(){
-    document.body.style.backgroundColor = "brown"
-  }
   return(
-    <button onClick={ChangeColor}>Click me</button>
+    <nav>
+      <NavBar></NavBar>
+    </nav>
   )
 }
