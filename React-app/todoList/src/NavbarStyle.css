@@ -38,6 +38,10 @@ body{
 .container .contact .githubIcon{
     height: 80px;
 }
+.container .contact a{
+    text-decoration: none;
+    color: white;
+}
 .container .contact .span{
     display: flex;
     justify-content: center;
@@ -48,9 +52,10 @@ body{
     padding: 0px 15px;
     border-radius: 10px;
 }
-/* .container .contact .span img{
-    height: 50px;
-} */
+.container .contact .span .contactMe a{
+    text-decoration: none;
+    color: white;
+}
 .container .contact img{
     height: 60px;
 }

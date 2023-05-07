@@ -24,12 +24,12 @@ export default function NavBar(){
                 </li>
             </ul>
             <div className="contact">
-                <img className="linkdlenIcon" src={linkdlen} alt="" />
-                <img className="githubIcon" src={github} alt="" />
-                <span className="span">
+                <a href="https://www.linkedin.com/in/bilal-atrgouti-98b202237/" target="_blank"><img className="linkdlenIcon" src={linkdlen} alt="" /></a>
+                <a href="https://github.com/atrgouti" target="_blank"><img className="githubIcon" src={github} alt="" /></a>
+                <a href="#"><span className="span">
                     <p className="contactMe">Contact Me</p>
                     <img src={contact} alt="" />
-                </span>
+                </span></a>
             </div>
         </div>
     );
