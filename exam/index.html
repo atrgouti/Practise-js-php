@@ -12,8 +12,8 @@
     </style>
 </head>
 <body>
-    <input type="text" id="inpt">
-    <button id="search">search</button>
+    <input type="text" id="input">
+    <button id="searchBtn">search</button>
     <button id="afficher">afficher</button>
     <table border="" style="border-collapse: collapse;">
         <tr>
@@ -35,7 +35,6 @@
         
         for(let i = 0; i < voitures.length; i++){
             let tbody = document.getElementById("tbody")
-            // document.getElementById("tbody").insertAdjacentElement("beforeend", )
             let tr = document.createElement("tr")
             let td1 = document.createElement("td")
             let td2 = document.createElement("td")
@@ -62,12 +61,30 @@
             })
         }
 
-        
+        // afficher button
         let afficher = document.getElementById("afficher")
-
         afficher.addEventListener("click", () => {
             let tbody = document.getElementById("tbody")
-            tbody.classList.toggle("active")
+            tbody.classList.remove("active")
+        })
+
+        let input = document.getElementById("input")
+        input.addEventListener("keydown", () => {
+            let input = document.getElementById("input")
+            let filter = input.value.toUpperCase();
+            let tbody = document.getElementById("tbody")
+            let tr = tbody.getElementsByTagName("tr")
+
+            for(let i = 0; i < tr.length; i++){
+                let a = tr[i].getElementsByTagName("td")[1]
+                let txtValue = a.textContent || a.innerText
+
+                if(txtValue.toUpperCase().indexOf(filter) > -1){
+                    tr[i].style.display = ''
+                }else{
+                    tr[i].style.display = 'none'
+                }
+            }
         })
     </script>
 </body>
