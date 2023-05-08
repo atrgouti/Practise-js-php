@@ -2,7 +2,7 @@ import "./MainSectionStyle.css"
 // import MyNameLogo from "../Photos/"
 import MyNameLogo from "../Photos/MyNameLogo.png"
 import download from "../Photos/download.png"
-import main from "../Photos/main.svg"
+import main from "../Photos/main.png"
 export default function MainSection(){
     return(
         <>
