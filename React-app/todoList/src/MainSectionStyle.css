@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.MainContainer{
+    height: 65vh;
+    width: 100%;
+    background-color: #111320 ;
+}
+.MainContainer .content h1{
+    margin: 0;
+    color: white;
+}
