@@ -40,8 +40,14 @@
     margin: 10px;
     border-radius: 10px;
     background-color: #2d303d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.containerSkills .box img{
+    height: 70%;
+}
 @media screen and (max-width: 800px){
     .containerSkills .wrapper{
         flex-direction: column;
