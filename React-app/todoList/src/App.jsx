@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import MainSection from './mainSection'
 import AboutMe from './AboutMe'
 import MySkills from './MySkills'
+import Projects from './projects'
 import "./AppStyle.css"
 export default function App() {
   return(
@@ -14,6 +15,7 @@ export default function App() {
     <section>
       <AboutMe></AboutMe>
       <MySkills></MySkills>
+      <Projects></Projects>
     </section>
     </>
   )

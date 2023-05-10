@@ -24,6 +24,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 600px;
 }
 .containerSkills .left{
     width: 50%;
@@ -31,11 +32,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 670px;
+    max-width: 600px;
 }
 .containerSkills .box{
-    height: 200px;
-    max-width: 200px;
+    height: 150px;
+    max-width: 140px;
     width: 90%;
     margin: 10px;
     border-radius: 10px;
