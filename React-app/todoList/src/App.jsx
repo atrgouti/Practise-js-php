@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import NavBar from './NavBar'
 import MainSection from './mainSection'
-import SecendSection from './SecendSection'
+import AboutMe from './AboutMe'
+import MySkills from './MySkills'
 import "./AppStyle.css"
 export default function App() {
   return(
@@ -9,11 +10,10 @@ export default function App() {
     <nav>
       <NavBar></NavBar>
     </nav>
-    <main>
       <MainSection></MainSection>
-    </main>
     <section>
-      <SecendSection></SecendSection>
+      <AboutMe></AboutMe>
+      <MySkills></MySkills>
     </section>
     </>
   )
