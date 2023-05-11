@@ -4,12 +4,73 @@ import blogrProject from "../Photos/blogrProject.png"
 import dashboardProject from "../Photos/dashboardProject.png"
 import githubIcon from "../Photos/githubIcon.png"
 import liveDemo from "../Photos/liveDemo.png"
+import React, { useRef, useEffect } from 'react';
+
+
+
 export default function Projects(){
+
+    const targetRef = useRef(null);
+    const targetRef2 = useRef(null);
+    const targetRef3 = useRef(null);
+    const targetRef4 = useRef(null);
+
+    const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add active class when the image is visible
+        entry.target.classList.add('active');
+      } 
+    });
+    };
+
+    useEffect(() => {
+        const options = {
+          root: null, // Use the viewport as the root element
+          rootMargin: '0px',
+          threshold: 0.5 // Customize the threshold value as desired
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, options);
+        const observer2 = new IntersectionObserver(handleIntersection, options);
+        const observer3 = new IntersectionObserver(handleIntersection, options);
+        const observer4 = new IntersectionObserver(handleIntersection, options);
+
+        if (targetRef.current) {
+          observer.observe(targetRef.current);
+        }
+        if (targetRef2.current) {
+          observer2.observe(targetRef2.current);
+        }
+        if (targetRef3.current) {
+          observer3.observe(targetRef3.current);
+        }
+        if (targetRef4.current) {
+          observer4.observe(targetRef4.current);
+        }
+    
+        return () => {
+          if (targetRef.current) {
+            observer.unobserve(targetRef.current);
+          }
+          if (targetRef2.current) {
+            observer2.unobserve(targetRef2.current);
+          }
+          if (targetRef3.current) {
+            observer3.unobserve(targetRef3.current);
+          }
+          if (targetRef4.current) {
+            observer4.unobserve(targetRef4.current);
+          }
+        };
+    }, []);
+
+
     return(
         <div className="projectsContainer">
-            <p className="aboutme">Projects<span>()</span></p>
+            <p className="aboutme" ref={targetRef}>Projects<span>()</span></p>
 
-            <div className="project">
+            <div className="project project1" ref={targetRef2}>
                 <img src={weatherProject} alt="" />
                 <div className="infos">
                     <h1>Weather App</h1>
@@ -21,18 +82,18 @@ export default function Projects(){
                     </span>
                     <span className="allLinks">
                         <div className="linksGit">
-                            <p>Code</p>
-                            <img src={githubIcon} alt="" />
+                            <p><a href="">Code</a></p>
+                            <a href=""><img src={githubIcon} alt="" /></a>
                         </div>
                         <div className="linksLive">
-                            <p>Live Demo</p>
-                            <img src={liveDemo} alt="" />
+                            <p><a href="">Live Demo</a></p>
+                            <a href=""><img src={liveDemo} alt="" /></a>
                         </div>
                     </span>
                 </div>
             </div>
 
-            <div className="project">
+            <div className="project project2" ref={targetRef3}>
                 <img src={blogrProject} alt="" />
                 <div className="infos">
                     <h1>Blogr</h1>
@@ -43,19 +104,19 @@ export default function Projects(){
                         <p>JAVASCRIPT</p>
                     </span>
                     <span className="allLinks">
-                        <div className="linksGit">
-                            <p>Code</p>
-                            <img src={githubIcon} alt="" />
+                    <div className="linksGit">
+                            <p><a href="">Code</a></p>
+                            <a href=""><img src={githubIcon} alt="" /></a>
                         </div>
                         <div className="linksLive">
-                            <p>Live Demo</p>
-                            <img src={liveDemo} alt="" />
+                            <p><a href="">Live Demo</a></p>
+                            <a href=""><img src={liveDemo} alt="" /></a>
                         </div>
                     </span>
                 </div>
             </div>
 
-            <div className="project germanigo">
+            <div className="project germanigo project3" ref={targetRef4}>
                 <img src={dashboardProject} alt="" />
                 <div className="infos">
                     <h1>Germanigo</h1>
@@ -69,12 +130,12 @@ export default function Projects(){
                     </span>
                     <span className="allLinks">
                         <div className="linksGit">
-                            <p>Code</p>
-                            <img src={githubIcon} alt="" />
+                            <p><a href="">Code</a></p>
+                            <a href=""><img src={githubIcon} alt="" /></a>
                         </div>
                         <div className="linksLive">
-                            <p>Live Demo</p>
-                            <img src={liveDemo} alt="" />
+                            <p><a href="">Live Demo</a></p>
+                            <a href=""><img src={liveDemo} alt="" /></a>
                         </div>
                     </span>
                 </div>
